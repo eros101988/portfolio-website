@@ -16,21 +16,26 @@ const projects = [
     featured: true,
   },
   {
-    title: 'LINE Automation Product',
+    title: 'LINE Automation & Tarot Bot',
     date: '2025',
-    description: 'A LINE-based scheduling and group messaging system. Allowed users to configure messages, schedule delivery, and target specific groups using a LINE bot.',
-    impact: 'Forced me to move beyond "AI generated some code" to understanding how multiple real services (APIs, databases, schedulers, auth) must work together reliably.',
-    tech: ['LINE API', 'Scheduling', 'Authentication', 'Server Deployment'],
+    description: 'A LINE-based interactive bot featuring Tarot reading capabilities and automated messaging systems. It allows users to engage with automated flows and receive dynamic responses directly within LINE.',
+    impact: 'Forced me to move beyond "AI generated some code" to understanding how multiple real services (APIs, databases, user state management, auth) must work together reliably.',
+    tech: ['LINE API', 'Interactive Flows', 'Backend Integration', 'Server Deployment'],
     icon: <Terminal className="w-6 h-6" />,
-    link: 'https://github.com/eros101988/LINE-Automation',
+    links: [
+      { url: 'https://github.com/eros101988/line-bot', text: 'View on GitHub', icon: 'github' }
+    ]
   },
   {
-    title: 'Taipei Metro Hackathon (3rd Place)',
+    title: '2026 Taipei Metro Hackathon (3rd Place)',
     date: '2026',
-    description: 'Served as the primary creator and operator behind a project that placed 3rd overall. Explored how Taipei Metro reward points could create economic value by allowing passengers to support local businesses.',
+    description: 'Served as the primary creator and operator behind the 3rd place project "一個努力讓難如登天的提案落地". Explored how Taipei Metro reward points could create economic value by allowing passengers to support local businesses.',
     impact: 'Reached a top result against traditional engineering teams, reinforcing that AI can dramatically change who is capable of becoming a builder.',
     tech: ['Product Concept', 'Business Model', 'Prototype Dev', 'Pitch Strategy'],
     icon: <GitBranch className="w-6 h-6" />,
+    links: [
+      { url: 'https://www.gov.taipei/News_Content.aspx?n=F0DDAF49B89E9413&s=EE0E656F596A909C&sms=72544237BBE4C5F6', text: 'Official Results (Gov.taipei)', icon: 'external' }
+    ]
   }
 ];
 
@@ -95,7 +100,7 @@ export function Projects() {
                     </div>
                   </div>
                   
-                  <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between h-full">
+                  <div className="lg:col-span-4 flex flex-col items-start lg:items-end justify-between h-full space-y-4 lg:space-y-0">
                     {project.featured ? (
                       <div className="w-full h-full min-h-[200px] rounded-xl bg-zinc-950 border border-zinc-800 p-6 flex flex-col justify-center items-center text-center space-y-4">
                         <Database className="w-12 h-12 text-zinc-700" />
@@ -108,12 +113,14 @@ export function Projects() {
                         </Button>
                       </div>
                     ) : (
-                      project.link && (
-                        <Button variant="ghost" size="sm" onClick={() => window.open(project.link, '_blank')}>
-                          <Github className="w-4 h-4 mr-2" />
-                          View on GitHub
-                        </Button>
-                      )
+                      <div className="flex flex-col space-y-3 w-full lg:w-auto">
+                        {(project as any).links?.map((link: any, i: number) => (
+                          <Button key={i} variant="ghost" size="sm" className="w-full lg:w-auto justify-start lg:justify-center" onClick={() => window.open(link.url, '_blank')}>
+                            {link.icon === 'github' ? <Github className="w-4 h-4 mr-2" /> : <ExternalLink className="w-4 h-4 mr-2" />}
+                            {link.text}
+                          </Button>
+                        ))}
+                      </div>
                     )}
                   </div>
                 </div>
