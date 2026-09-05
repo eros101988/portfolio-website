@@ -16,11 +16,11 @@ const projects = [
     featured: true,
   },
   {
-    title: 'LINE Automation & Tarot Bot',
+    title: 'LINE Automation Product',
     date: '2025',
-    description: 'A LINE-based interactive bot featuring Tarot reading capabilities and automated messaging systems. It allows users to engage with automated flows and receive dynamic responses directly within LINE.',
-    impact: 'Forced me to move beyond "AI generated some code" to understanding how multiple real services (APIs, databases, user state management, auth) must work together reliably.',
-    tech: ['LINE API', 'Interactive Flows', 'Backend Integration', 'Server Deployment'],
+    description: 'A LINE-based scheduling and group messaging system. Allowed users to configure messages, schedule delivery, and target specific groups using a LINE bot.',
+    impact: 'Forced me to move beyond "AI generated some code" to understanding how multiple real services (APIs, databases, schedulers, auth) must work together reliably.',
+    tech: ['LINE API', 'Scheduling', 'Authentication', 'Server Deployment'],
     icon: <Terminal className="w-6 h-6" />,
     links: [
       { url: 'https://github.com/eros101988/line-bot', text: 'View on GitHub', icon: 'github' }
