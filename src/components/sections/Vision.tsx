@@ -70,7 +70,8 @@ export function Vision() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.2 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
           >
             <h3 className="text-2xl font-bold text-zinc-100 mb-6">Why Claude?</h3>
             <Card className="h-full bg-zinc-900/50">

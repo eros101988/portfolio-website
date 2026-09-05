@@ -18,7 +18,7 @@ export function Card({ className, children, hover = false, ...props }: CardProps
         className
       )}
       {...(hover ? { whileHover: { y: -5 }, transition: { duration: 0.2 } } : {})}
-      {...props}
+      {...(props as any)}
     >
       {children}
     </Comp>
