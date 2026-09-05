@@ -64,7 +64,7 @@ export function Navbar() {
             <a href="https://github.com/eros101988" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-100 transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="mailto:contact@example.com" className="text-zinc-400 hover:text-zinc-100 transition-colors">
+            <a href="mailto:eros101988@gmail.com" className="text-zinc-400 hover:text-zinc-100 transition-colors">
               <Mail className="w-5 h-5" />
             </a>
           </div>
@@ -103,7 +103,7 @@ export function Navbar() {
                 <a href="https://github.com/eros101988" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-100">
                   <Github className="w-6 h-6" />
                 </a>
-                <a href="mailto:contact@example.com" className="text-zinc-400 hover:text-zinc-100">
+                <a href="mailto:eros101988@gmail.com" className="text-zinc-400 hover:text-zinc-100">
                   <Mail className="w-6 h-6" />
                 </a>
               </div>

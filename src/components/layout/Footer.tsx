@@ -17,7 +17,7 @@ export function Footer() {
           
           <div className="flex flex-col md:items-end space-y-4">
             <a 
-              href="mailto:contact@example.com" 
+              href="mailto:eros101988@gmail.com" 
               className="inline-flex items-center text-lg font-medium text-orange-400 hover:text-orange-300 transition-colors group"
             >
               Get in touch
